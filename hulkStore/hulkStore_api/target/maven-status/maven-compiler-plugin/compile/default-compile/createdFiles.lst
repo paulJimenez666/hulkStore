@@ -1,8 +1,14 @@
+co\com\dao\ProductoDAO.class
+co\com\dao\impl\CarritoDAOImpl.class
+co\com\model\Carrito.class
 co\com\util\StoreException.class
+co\com\model\Producto.class
+co\com\dao\impl\UsuarioDAOImpl.class
 co\com\dao\UsuarioDAO.class
 co\com\model\Usuario.class
-co\com\dao\impl\UsuarioDAOImpl.class
+co\com\dao\impl\ProductoDAOImpl.class
 co\com\dao\impl\GenericDAOImpl.class
 co\com\model\JPAUtil.class
 co\com\dao\GenericDAO.class
 co\com\java\App.class
+co\com\dao\CarritoDAO.class

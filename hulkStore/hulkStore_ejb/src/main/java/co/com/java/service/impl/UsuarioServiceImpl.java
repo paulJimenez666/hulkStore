@@ -6,8 +6,10 @@ package co.com.java.service.impl;
 
 import java.util.List;
 
-import javax.ejb.EJB;
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 import co.com.dao.UsuarioDAO;
@@ -23,11 +25,11 @@ import co.com.util.StoreException;
  * @since JDK 1.8
  */
 
-@Named
-@ApplicationScoped
+@Stateless
+@LocalBean
 public class UsuarioServiceImpl implements UsuarioService {
 
-	@EJB
+	@Inject
 	UsuarioDAO usuarioDao;
 
 	@Override

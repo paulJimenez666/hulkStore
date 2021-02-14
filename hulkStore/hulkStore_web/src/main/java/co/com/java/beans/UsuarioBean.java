@@ -5,12 +5,13 @@
 package co.com.java.beans;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 /**
- * <b> Incluir aqui la descripcion de la clase. </b>
+ * <b> Permite transportar las propiedades hacia la pagina. </b>
  * 
  * @author Paul Jimenez
  * @version 1.0,12/02/2021
@@ -27,6 +28,7 @@ public class UsuarioBean implements Serializable {
 	private String nombre;
 	private String apellido;
 	private String identificacion;
+	private Date fechaRegistro;
 
 	/**
 	 * @return the nombre
@@ -68,6 +70,20 @@ public class UsuarioBean implements Serializable {
 	 */
 	public void setIdentificacion(String identificacion) {
 		this.identificacion = identificacion;
+	}
+
+	/**
+	 * @return the fechaRegistro
+	 */
+	public Date getFechaRegistro() {
+		return fechaRegistro;
+	}
+
+	/**
+	 * @param fechaRegistro the fechaRegistro to set
+	 */
+	public void setFechaRegistro(Date fechaRegistro) {
+		this.fechaRegistro = fechaRegistro;
 	}
 
 }

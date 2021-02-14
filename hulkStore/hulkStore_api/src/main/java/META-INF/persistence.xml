@@ -8,6 +8,8 @@
 		<description>Sample Hibernate Postgresql Dialect</description>
 		<jta-data-source>java:jboss/datasources/HulkStoreDS</jta-data-source>
 		<class>co.com.model.Usuario</class>
+		<class>co.com.model.Carrito</class>
+		<class>co.com.model.Producto</class>
 		<properties>
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
                 <property name="hibernate.connection.username" value="postgres" />

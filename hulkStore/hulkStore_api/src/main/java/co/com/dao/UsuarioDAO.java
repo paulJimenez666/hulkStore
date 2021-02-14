@@ -4,6 +4,8 @@
  */
 package co.com.dao;
 
+import javax.ejb.Local;
+
 import co.com.model.Usuario;
 
 /**
@@ -13,8 +15,7 @@ import co.com.model.Usuario;
  * @version 1.0,11/02/2021
  * @since JDK 1.8
  */
-
+@Local
 public interface UsuarioDAO extends GenericDAO<Usuario, Integer> {
 
-	
 }

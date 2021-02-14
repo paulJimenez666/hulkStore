@@ -1,8 +1,14 @@
 C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\java\App.java
 C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\model\Usuario.java
+C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\model\Producto.java
 C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\dao\impl\UsuarioDAOImpl.java
 C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\dao\UsuarioDAO.java
+C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\dao\ProductoDAO.java
 C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\dao\GenericDAO.java
 C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\dao\impl\GenericDAOImpl.java
 C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\util\StoreException.java
 C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\model\JPAUtil.java
+C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\model\Carrito.java
+C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\dao\impl\CarritoDAOImpl.java
+C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\dao\impl\ProductoDAOImpl.java
+C:\Workspace HulkStore\hulkStore\hulkStore_api\src\main\java\co\com\dao\CarritoDAO.java

@@ -6,5 +6,8 @@
    <Memento collapsed="false" type="Context Params"/>
    <Memento collapsed="false" type="Advanced"/>
   </Memento>
+  <Memento type="">
+   <Memento type="Properties Editor"/>
+  </Memento>
  </TreeFormPage>
 </Layout>

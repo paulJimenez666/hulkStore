@@ -11,10 +11,10 @@ import java.util.Map;
 
 import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
 import javax.faces.annotation.ManagedProperty;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
-import javax.inject.Inject;
 
 import org.apache.log4j.Logger;
 
@@ -43,7 +43,7 @@ public class UsuarioBacking implements Serializable {
 	private UsuarioBean usuarioBean;
 
 	
-	@Inject
+	@EJB
 	private UsuarioService usuarioService;
 
 	private List<Usuario> usuarios;
