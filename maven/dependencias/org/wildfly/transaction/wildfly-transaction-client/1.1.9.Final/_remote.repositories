@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Feb 12 21:51:44 COT 2021
+wildfly-transaction-client-1.1.9.Final.jar>central=
+wildfly-transaction-client-1.1.9.Final-sources.jar>central=
+wildfly-transaction-client-1.1.9.Final.pom>central=

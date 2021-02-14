@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>notas_contables_core</groupId>
+  <artifactId>notas_contables_core</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20201204163651</lastUpdated>
+  </versioning>
+</metadata>

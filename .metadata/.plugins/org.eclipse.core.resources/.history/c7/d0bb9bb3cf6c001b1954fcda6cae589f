@@ -1,0 +1,41 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.dao.impl;
+
+import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import co.com.dao.GenericDAO;
+
+/**
+ * <b> Incluir aqui la descripcion de la clase. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,11/02/2021
+ * @since JDK 1.8
+ */
+public class GenericDAOImpl<T, ID extends Serializable> implements GenericDAO<T, ID> {
+
+	private final Class<T> persistentClass;
+	@PersistenceContext(unitName = "hulkStore_api")
+	protected EntityManager em;
+
+	@SuppressWarnings("unchecked")
+	public GenericDAOImpl() {
+		this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+	}
+
+	@Override
+	public T findById(ID id) {
+		return getEntityManager().find(persistentClass, id);
+	}
+
+	public EntityManager getEntityManager() {
+		return this.em;
+	}
+}

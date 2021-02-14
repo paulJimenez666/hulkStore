@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Nov 30 12:47:17 COT 2020
+https\://repo.maven.apache.org/maven2/.lastUpdated=1606758437795
+http\://repository.primefaces.org/.error=Could not transfer artifact org.apache.ant\:ant-launcher\:jar\:sources\:1.7.1 from/to prime-repo (http\://repository.primefaces.org)\: repository.primefaces.org
+https\://repo.maven.apache.org/maven2/.error=
+@default-prime-repo-http\://repository.primefaces.org/.lastUpdated=1606758437502

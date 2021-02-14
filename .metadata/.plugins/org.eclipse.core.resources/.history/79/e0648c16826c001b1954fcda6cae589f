@@ -1,0 +1,16 @@
+package co.com.java.main.resources;
+
+import javax.annotation.PostConstruct;
+
+import com.indoqa.boot.html.react.AbstractCreateReactAppResourceBase;
+
+public class FrontendResource extends AbstractCreateReactAppResourceBase {
+
+    private static final String FRONTEND_FILESYSTEM_LOCATION = "../hulkStore_api-frontend/build/";
+    private static final String FRONTEND_CLASSPATH_LOCATION = "/hulkStore_api-frontend";
+
+    @PostConstruct
+    public void mount() {
+        this.html(FRONTEND_CLASSPATH_LOCATION, FRONTEND_FILESYSTEM_LOCATION);
+    }
+}

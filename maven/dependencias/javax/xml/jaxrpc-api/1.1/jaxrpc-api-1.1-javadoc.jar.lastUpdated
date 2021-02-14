@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Nov 13 09:46:34 COT 2020
+https\://globaldevtools.bbva.com/artifactory-api/list/repository-notas-contables/.lastUpdated=1604957525099
+https\://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api/.error=Could not transfer artifact javax.xml\:jaxrpc-api\:jar\:javadoc\:1.1 from/to central (https\://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api)\: Access denied to https\://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api/javax/xml/jaxrpc-api/1.1/jaxrpc-api-1.1-javadoc.jar. Error code 403, 
+f09cd81d45e767a9718a47695e7c47445fa4b340@default-snapshots-https\://mvnrepository.com/artifact/jstl/jstl/.lastUpdated=1605278794375
+f09cd81d45e767a9718a47695e7c47445fa4b340@default-central-https\://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api/.lastUpdated=1605278794103
+https\://mvnrepository.com/artifact/jstl/jstl/.error=Could not transfer artifact javax.xml\:jaxrpc-api\:jar\:javadoc\:1.1 from/to snapshots (https\://mvnrepository.com/artifact/jstl/jstl)\: Access denied to https\://mvnrepository.com/artifact/jstl/jstl/javax/xml/jaxrpc-api/1.1/jaxrpc-api-1.1-javadoc.jar. Error code 403, 
+https\://repo.maven.apache.org/maven2/.lastUpdated=1605273974533
+https\://globaldevtools.bbva.com/artifactory-api/list/repository-notas-contables/.error=
+https\://repo.maven.apache.org/maven2/.error=

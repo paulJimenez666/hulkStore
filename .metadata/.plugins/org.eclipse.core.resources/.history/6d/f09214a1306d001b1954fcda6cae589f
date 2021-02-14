@@ -1,0 +1,39 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.java.backings;
+
+import java.io.Serializable;
+
+import javax.annotation.ManagedBean;
+import javax.enterprise.context.RequestScoped;
+import javax.faces.annotation.ManagedProperty;
+
+import co.com.java.beans.UsuarioBean;
+
+/**
+ * <b> Permite manejar las operaciones derivadas de la pagina web en la aplicacion. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,12/02/2021
+ * @since JDK 1.8
+ */
+@ManagedBean
+@RequestScoped
+public class UsuarioBacking implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@ManagedProperty(value = "#{usuarioBean}")
+	private UsuarioBean usuarioBean;
+
+	/**
+	 * 
+	 */
+	public UsuarioBacking() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

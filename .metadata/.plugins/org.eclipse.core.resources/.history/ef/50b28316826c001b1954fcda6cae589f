@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Usuario
+Build-Jdk: 11.0.9
+Specification-Title: Integration Tests
+Specification-Version: 0.0
+Implementation-Title: Integration Tests
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: co.com.hulkStore
+Created-By: Maven Integration for Eclipse
+

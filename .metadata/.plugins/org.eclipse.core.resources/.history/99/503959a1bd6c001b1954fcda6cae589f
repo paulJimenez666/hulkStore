@@ -1,0 +1,5 @@
+package co.com.model;
+
+public class JPAUtil {
+
+}

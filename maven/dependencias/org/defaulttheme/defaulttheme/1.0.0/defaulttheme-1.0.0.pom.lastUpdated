@@ -1,0 +1,12 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Dec 02 07:30:22 COT 2020
+f09cd81d45e767a9718a47695e7c47445fa4b340@default-snapshots-https\://mvnrepository.com/artifact/jstl/jstl/.lastUpdated=1605278749172
+https\://globaldevtools.bbva.com/artifactory-api/list/repository-notas-contables/.error=
+https\://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api/.error=Could not transfer artifact org.defaulttheme\:defaulttheme\:pom\:1.0.0 from/to central (https\://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api)\: Access denied to https\://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api/org/defaulttheme/defaulttheme/1.0.0/defaulttheme-1.0.0.pom. Error code 403, 
+f09cd81d45e767a9718a47695e7c47445fa4b340@default-central-https\://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api/.lastUpdated=1605278749097
+https\://repo.maven.apache.org/maven2/.lastUpdated=1606912222556
+https\://globaldevtools.bbva.com/artifactory-api/list/repository-notas-contables/.lastUpdated=1605277856808
+https\://repo.maven.apache.org/maven2/.error=
+http\://maven.repository.redhat.com/earlyaccess/all/.lastUpdated=1605278489097
+https\://mvnrepository.com/artifact/jstl/jstl/.error=Could not transfer artifact org.defaulttheme\:defaulttheme\:pom\:1.0.0 from/to snapshots (https\://mvnrepository.com/artifact/jstl/jstl)\: Access denied to https\://mvnrepository.com/artifact/jstl/jstl/org/defaulttheme/defaulttheme/1.0.0/defaulttheme-1.0.0.pom. Error code 403, 
+http\://maven.repository.redhat.com/earlyaccess/all/.error=

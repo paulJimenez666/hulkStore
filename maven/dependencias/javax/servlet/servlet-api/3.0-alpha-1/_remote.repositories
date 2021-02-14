@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Feb 11 17:09:51 COT 2021
+servlet-api-3.0-alpha-1.jar>central=
+servlet-api-3.0-alpha-1-sources.jar>central=
+servlet-api-3.0-alpha-1.pom>central=

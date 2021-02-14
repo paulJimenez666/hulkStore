@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>co.com.hulkStore</groupId>
+  <artifactId>hulkStore_api</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20210214143959</lastUpdated>
+  </versioning>
+</metadata>

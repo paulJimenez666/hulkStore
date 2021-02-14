@@ -1,0 +1,8 @@
+co\com\util\StoreException.class
+co\com\dao\UsuarioDAO.class
+co\com\model\Usuario.class
+co\com\dao\impl\UsuarioDAOImpl.class
+co\com\dao\impl\GenericDAOImpl.class
+co\com\model\JPAUtil.class
+co\com\dao\GenericDAO.class
+co\com\java\App.class

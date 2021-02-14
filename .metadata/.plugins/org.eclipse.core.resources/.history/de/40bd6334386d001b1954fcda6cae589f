@@ -1,0 +1,90 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.java.backings;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.annotation.ManagedBean;
+import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
+import javax.faces.annotation.ManagedProperty;
+
+import co.com.java.beans.UsuarioBean;
+import co.com.model.Usuario;
+
+/**
+ * <b> Permite manejar las operaciones derivadas de la pagina web en la aplicacion. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,12/02/2021
+ * @since JDK 1.8
+ */
+@ManagedBean
+@RequestScoped
+public class UsuarioBacking implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@ManagedProperty(value = "#{usuarioBean}")
+	private UsuarioBean usuarioBean;
+
+	private List<Usuario> usuarios;
+
+	@PostConstruct
+	public void init() {
+
+	}
+
+	/**
+	 * 
+	 * <b> Permite consultar todos los usuarios registrados en la base de datos. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 12/02/2021]
+	 * </p>
+	 *
+	 */
+	public void consultarUsuarios() {
+
+	}
+
+	/**
+	 * @return the usuarioBean
+	 */
+	public UsuarioBean getUsuarioBean() {
+		return usuarioBean;
+	}
+
+	/**
+	 * @param usuarioBean the usuarioBean to set
+	 */
+	public void setUsuarioBean(UsuarioBean usuarioBean) {
+		this.usuarioBean = usuarioBean;
+	}
+
+	/**
+	 * @return the usuarios
+	 */
+	public List<Usuario> getUsuarios() {
+		return usuarios;
+	}
+
+	/**
+	 * @param usuarios the usuarios to set
+	 */
+	public void setUsuarios(List<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+
+	/**
+	 * 
+	 */
+	public UsuarioBacking() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+org.eclipse.m2e.editor.xml.templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="org.eclipse.m2e.editor.xml.templates.contextType.properties" deleted\="false" description\="Enable or disable m2e-wtp configuration" enabled\="false" id\="org.eclipse.m2e.wtp.xml.templates.m2eWtpActivationProperty" name\="m2e-wtp activation">&lt;m2e.wtp.activation&gt;${cursor}${false}&lt;/m2e.wtp.activation&gt;</template></templates>

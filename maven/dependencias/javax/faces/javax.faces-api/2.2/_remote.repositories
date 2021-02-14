@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Nov 13 08:26:00 COT 2020
+javax.faces-api-2.2-sources.jar>central=
+javax.faces-api-2.2.pom>aws-libs-release=
+javax.faces-api-2.2.pom>central=

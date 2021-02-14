@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Nov 30 12:47:26 COT 2020
+https\://repo.maven.apache.org/maven2/.lastUpdated=1606758446050
+http\://repository.primefaces.org/.error=Could not transfer artifact dom4j\:dom4j\:jar\:sources\:1.6.1 from/to prime-repo (http\://repository.primefaces.org)\: repository.primefaces.org
+@default-prime-repo-http\://repository.primefaces.org/.lastUpdated=1606758445515

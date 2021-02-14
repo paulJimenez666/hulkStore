@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Nov 30 12:47:03 COT 2020
+https\://repo.maven.apache.org/maven2/.lastUpdated=1606758423770
+http\://repository.primefaces.org/.error=Could not transfer artifact org.codehaus.groovy\:groovy-all\:jar\:sources\:1.7.5 from/to prime-repo (http\://repository.primefaces.org)\: repository.primefaces.org
+@default-prime-repo-http\://repository.primefaces.org/.lastUpdated=1606758422980

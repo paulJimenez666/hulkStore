@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.bbva.notas_contables</groupId>
+  <artifactId>notas_contables_war</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20201202220009</lastUpdated>
+  </versioning>
+</metadata>

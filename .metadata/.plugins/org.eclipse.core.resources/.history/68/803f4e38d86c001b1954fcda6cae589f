@@ -1,0 +1,27 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.dao.impl;
+
+import co.com.dao.UsuarioDAO;
+import co.com.model.Usuario;
+import co.com.util.StoreException;
+
+/**
+ * <b> Implementación de metodos para el CRUD del usuario. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,11/02/2021
+ * @since JDK 1.8
+ */
+@Stateless
+public class UsuarioDAOImpl extends GenericDAOImpl<Usuario, Integer> implements UsuarioDAO {
+
+	@Override
+	public void guardarUsuario(Usuario usuario) throws StoreException {
+		
+
+	}
+
+}

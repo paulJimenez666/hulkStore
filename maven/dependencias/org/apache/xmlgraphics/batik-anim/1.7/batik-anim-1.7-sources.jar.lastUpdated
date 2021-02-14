@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Nov 30 12:47:42 COT 2020
+http\://repository.primefaces.org/.error=
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1606758462861
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.xmlgraphics\:batik-anim\:jar\:sources\:1.7 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org
+http\://repository.primefaces.org/.lastUpdated=1606758462855

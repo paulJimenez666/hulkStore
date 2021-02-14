@@ -1,0 +1,28 @@
+package co.com.java.main.config;
+
+import co.com.java.main.resources.GeonamesProxyResource;
+import co.com.java.main.resources.TestJsonResource;
+import co.com.java.main.resources.WordsProxyResource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@PropertySource("classpath:/application.properties")
+public class Config {
+
+    @Bean
+    public GeonamesProxyResource geonamesProxyResource() {
+        return new GeonamesProxyResource();
+    }
+
+    @Bean
+    public WordsProxyResource wordsProxyResource() {
+        return new WordsProxyResource();
+    }
+
+    @Bean
+    public TestJsonResource testJsonResource() {
+        return new TestJsonResource();
+    }
+}

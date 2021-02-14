@@ -1,0 +1,63 @@
+package co.com.model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.sql.Array;
+
+
+/**
+ * The persistent class for the usuario database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Usuario.findAll", query="SELECT u FROM Usuario u")
+public class Usuario implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id_usuario")
+	private Integer idUsuario;
+
+	private String apellido;
+
+	private String identificacion;
+
+	private String nombre;
+
+	public Usuario() {
+	}
+
+	public Integer getIdUsuario() {
+		return this.idUsuario;
+	}
+
+	public void setIdUsuario(Integer idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public Array getApellido() {
+		return this.apellido;
+	}
+
+	public void setApellido(Array apellido) {
+		this.apellido = apellido;
+	}
+
+	public Array getIdentificacion() {
+		return this.identificacion;
+	}
+
+	public void setIdentificacion(Array identificacion) {
+		this.identificacion = identificacion;
+	}
+
+	public Array getNombre() {
+		return this.nombre;
+	}
+
+	public void setNombre(Array nombre) {
+		this.nombre = nombre;
+	}
+
+}

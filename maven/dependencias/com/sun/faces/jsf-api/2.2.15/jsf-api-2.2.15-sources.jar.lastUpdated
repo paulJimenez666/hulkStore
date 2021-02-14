@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Nov 30 11:02:14 COT 2020
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1606752134411
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.sun.faces\:jsf-api\:jar\:sources\:2.2.15 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org
