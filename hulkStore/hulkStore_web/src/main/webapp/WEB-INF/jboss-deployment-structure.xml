@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-deployment-structure>
+	<ear-subdeployments-isolated>false</ear-subdeployments-isolated>
 	<deployment>
+		<exclude-subsystems>
+			<subsystem name="resteasy" />
+		</exclude-subsystems>
 		<exclusions>
 			<module name="org.jboss.resteasy.skeleton-key" />
+			<module name="org.javassist" />
 		</exclusions>
 	</deployment>
+	<dependencies>
+		<module name="org.apache.cxf" export="true" />
+		<module name="org.apache.cxf.impl" export="true" />
+		<module name="deployment.javassist.proxy" />
+		<module name="deployment.myjavassist" />
+	</dependencies>
+	<sub-deployment name="hulkStore_web.war">
+		<dependencies>
+			<module name="hulkStore_ejb.jar" />
+		</dependencies>
+		<local-last value="true" />
+	</sub-deployment>
+
 </jboss-deployment-structure>

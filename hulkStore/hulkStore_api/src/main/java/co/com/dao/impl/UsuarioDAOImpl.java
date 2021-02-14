@@ -19,7 +19,6 @@ import co.com.model.Usuario;
  */
 
 @Stateless
-@LocalBean
 public class UsuarioDAOImpl extends GenericDAOImpl<Usuario, Integer> implements UsuarioDAO {
 
 }

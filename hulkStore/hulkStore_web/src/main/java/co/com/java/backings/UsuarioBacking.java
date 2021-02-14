@@ -9,12 +9,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
-import javax.ejb.EJB;
 import javax.faces.annotation.ManagedProperty;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.apache.log4j.Logger;
 
@@ -30,7 +30,7 @@ import co.com.util.StoreException;
  * @version 1.0,12/02/2021
  * @since JDK 1.8
  */
-@ManagedBean
+@Named("usuarioBacking")
 @ViewScoped
 public class UsuarioBacking implements Serializable {
 	/**
@@ -43,7 +43,7 @@ public class UsuarioBacking implements Serializable {
 	private UsuarioBean usuarioBean;
 
 	
-	@EJB
+	@Inject
 	private UsuarioService usuarioService;
 
 	private List<Usuario> usuarios;

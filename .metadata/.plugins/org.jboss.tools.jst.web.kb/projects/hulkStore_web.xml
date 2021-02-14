@@ -108,15 +108,33 @@
   <path value="C:/Workspace HulkStore/maven/dependencias/org/wildfly/common/wildfly-common/1.5.2.Final/wildfly-common-1.5.2.Final.jar"/>
  </paths>
  <validation>
+  <core validator-id="jsf-verification"/>
   <core validator-id="jboss.cdi.core">
    <linked-resource declaration="true" name="%1;" path="%0"/>
+   <linked-resource name="%4;" path="%2"/>
+   <linked-resource declaration="true" name="%3;" path="%2"/>
+   <linked-resource name="%4;" path="%5"/>
+   <linked-resource declaration="true" name="%6;" path="%4"/>
   </core>
-  <el/>
+  <core validator-id="batch-verification"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="16" name="%0" offset="1062" path="%4"/>
+   <linked-el length="16" name="%1" offset="1062" path="%4"/>
+  </el>
  </validation>
  <aliases>
   <alias
+   path="/hulkStore_ejb/src/main/java/co/com/java/service/UsuarioService.java" value="%5"/>
+  <alias
    path="/hulkStore_web/src/main/java/co/com/java/beans/UsuarioBean.java" value="%0"/>
+  <alias path="usuarioServiceImpl" value="%3"/>
   <alias path="usuarioBean" value="%1"/>
+  <alias
+   path="/hulkStore_ejb/src/main/java/co/com/java/service/impl/UsuarioServiceImpl.java" value="%2"/>
+  <alias
+   path="/hulkStore_web/src/main/java/co/com/java/backings/UsuarioBacking.java" value="%4"/>
+  <alias path="usuarioBacking" value="%6"/>
  </aliases>
  <includes/>
  <uris>
