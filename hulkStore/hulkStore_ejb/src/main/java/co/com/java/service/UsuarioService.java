@@ -43,6 +43,55 @@ public interface UsuarioService {
 	 * @return
 	 * @throws StoreException
 	 */
-	public List<Usuario> consultarUsuario() throws StoreException;
+	public List<Usuario> consultarUsuarios() throws StoreException;
+
+	/**
+	 * 
+	 * <b> Permite buscar un usaurio ingresando su id. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param id
+	 * @return
+	 * @throws StoreException
+	 */
+	public Usuario buscarUsuario(Integer id) throws StoreException;
+
+	/**
+	 * 
+	 * <b> Permite actualizar un usuario </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param usuario
+	 * @throws StoreException
+	 */
+	public void actualizarUsuario(Usuario usuario) throws StoreException;
+
+	/**
+	 * 
+	 * <b> Permite eliminar un registro de la tabla usuario. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param usuario
+	 * @throws StoreException
+	 */
+	public void borrarUsuario(Usuario usuario) throws StoreException;
+
+	/**
+	 * 
+	 * <b> Permite borrar un usuario por id. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param id
+	 * @throws StoreException
+	 */
+	public void borrarUsuarioById(Integer id) throws StoreException;
 
 }

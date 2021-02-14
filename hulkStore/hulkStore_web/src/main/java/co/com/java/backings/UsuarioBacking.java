@@ -42,7 +42,6 @@ public class UsuarioBacking implements Serializable {
 	@ManagedProperty(value = "#{usuarioBean}")
 	private UsuarioBean usuarioBean;
 
-	
 	@Inject
 	private UsuarioService usuarioService;
 
@@ -51,7 +50,7 @@ public class UsuarioBacking implements Serializable {
 
 	@PostConstruct
 	public void init() throws StoreException {
-		//consultarUsuarios();
+		// consultarUsuarios();
 	}
 
 	/**
@@ -65,7 +64,7 @@ public class UsuarioBacking implements Serializable {
 	 *
 	 */
 	public void consultarUsuarios() throws StoreException {
-		usuarios = usuarioService.consultarUsuario();
+		usuarios = usuarioService.consultarUsuarios();
 	}
 
 	/**
@@ -102,6 +101,71 @@ public class UsuarioBacking implements Serializable {
 			usuarioService.guardarUsuario(usuario);
 		} catch (StoreException e) {
 			e.printStackTrace();
+		}
+		return "/faces/index.xhtml";
+	}
+
+	/**
+	 * 
+	 * <b> Permite editar un usuario. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param id
+	 * @return
+	 */
+	public String editar(Integer id) {
+		Usuario usuarioEdit = new Usuario();
+		try {
+			usuarioEdit = usuarioService.buscarUsuario(id);
+
+			Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+			sessionMap.put("usuario", usuarioEdit);
+		} catch (StoreException e) {
+			e.printStackTrace();
+		}
+		return "/faces/Editar.xhtml";
+	}
+
+	/**
+	 * 
+	 * <b> Permite actualizar un usuario y agregar la fecha de registro. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param usuario
+	 * @return
+	 */
+	public String actualizar(Usuario usuario) {
+		// guarda la fecha de actualizacion
+		Date fechaActual = new Date();
+		usuario.setFechaRegistro(fechaActual);
+
+		try {
+			usuarioService.actualizarUsuario(usuario);
+		} catch (StoreException e) {
+			e.printStackTrace();
+		}
+		return "/faces/index.xhtml";
+	}
+
+	/**
+	 * 
+	 * <b> Permite eliminar un usuario de la tabla </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param id
+	 * @return
+	 */
+	public String eliminar(Integer id) {
+		try {
+			usuarioService.borrarUsuarioById(id);
+		} catch (StoreException e) {
+			// TODO Auto-generated catch block
 		}
 		return "/faces/index.xhtml";
 	}

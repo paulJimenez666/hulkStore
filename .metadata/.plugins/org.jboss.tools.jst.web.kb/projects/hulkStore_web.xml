@@ -119,22 +119,99 @@
   <core validator-id="batch-verification"/>
   <core validator-id="jboss.jsf.core"/>
   <el>
+   <linked-el length="26" name="%7" offset="1072" path="%8"/>
+   <linked-el length="28" name="%9" offset="652" path="%10"/>
+   <linked-el length="21" name="%11" offset="829" path="%8"/>
+   <linked-el length="19" name="%6" offset="877" path="%12"/>
+   <linked-el length="26" name="%6" offset="1165" path="%12"/>
+   <linked-el length="21" name="%6" offset="1016" path="%12"/>
+   <linked-el length="28" name="%6" offset="644" path="%12"/>
+   <linked-el length="29" name="%6" offset="737" path="%12"/>
+   <linked-el length="26" name="%13" offset="948" path="%8"/>
+   <linked-el length="30" name="%14" offset="745" path="%10"/>
+   <linked-el length="28" name="%14" offset="652" path="%10"/>
+   <linked-el length="34" name="%14" offset="2416" path="%10"/>
+   <linked-el length="28" name="%14" offset="466" path="%10"/>
+   <linked-el length="19" name="%15" offset="718" path="%8"/>
+   <linked-el length="19" name="%16" offset="877" path="%12"/>
+   <linked-el length="26" name="%16" offset="1165" path="%12"/>
+   <linked-el length="21" name="%16" offset="1016" path="%12"/>
+   <linked-el length="19" name="%17" offset="1978" path="%10"/>
+   <linked-el length="19" name="%17" offset="2069" path="%10"/>
+   <linked-el length="30" name="%18" offset="745" path="%10"/>
+   <linked-el length="18" name="%19" offset="906" path="%10"/>
+   <linked-el length="19" name="%19" offset="1978" path="%10"/>
+   <linked-el length="18" name="%19" offset="1211" path="%10"/>
+   <linked-el length="29" name="%19" offset="1515" path="%10"/>
+   <linked-el length="18" name="%19" offset="1012" path="%10"/>
+   <linked-el length="29" name="%19" offset="1620" path="%10"/>
+   <linked-el length="18" name="%19" offset="1301" path="%10"/>
+   <linked-el length="19" name="%19" offset="2069" path="%10"/>
    <linked-el length="16" name="%0" offset="1062" path="%4"/>
+   <linked-el length="29" name="%20" offset="1515" path="%10"/>
+   <linked-el length="29" name="%20" offset="1620" path="%10"/>
+   <linked-el length="18" name="%21" offset="1211" path="%10"/>
+   <linked-el length="18" name="%21" offset="1301" path="%10"/>
+   <linked-el length="37" name="%22" offset="1173" path="%8"/>
+   <linked-el length="38" name="%22" offset="1490" path="%12"/>
+   <linked-el length="36" name="%22" offset="1313" path="%12"/>
+   <linked-el length="28" name="%4" offset="644" path="%12"/>
+   <linked-el length="29" name="%4" offset="737" path="%12"/>
+   <linked-el length="37" name="%23" offset="1173" path="%8"/>
+   <linked-el length="38" name="%23" offset="1490" path="%12"/>
+   <linked-el length="36" name="%23" offset="1313" path="%12"/>
+   <linked-el length="18" name="%24" offset="906" path="%10"/>
+   <linked-el length="18" name="%24" offset="1012" path="%10"/>
+   <linked-el length="38" name="%25" offset="1490" path="%12"/>
+   <linked-el length="36" name="%25" offset="1313" path="%12"/>
+   <linked-el length="36" name="%26" offset="1697" path="%10"/>
+   <linked-el length="36" name="%27" offset="1697" path="%10"/>
    <linked-el length="16" name="%1" offset="1062" path="%4"/>
+   <linked-el length="28" name="%28" offset="466" path="%10"/>
+   <linked-el length="26" name="%29" offset="948" path="%8"/>
+   <linked-el length="26" name="%29" offset="1072" path="%8"/>
+   <linked-el length="21" name="%29" offset="829" path="%8"/>
+   <linked-el length="19" name="%29" offset="718" path="%8"/>
+   <linked-el length="12" name="%30" offset="1756" path="%10"/>
+   <linked-el length="12" name="%30" offset="1778" path="%10"/>
   </el>
  </validation>
  <aliases>
+  <alias path="usuario.identifiacion" value="%7"/>
+  <alias
+   path="/hulkStore_ejb/src/main/java/co/com/java/service/impl/UsuarioServiceImpl.java" value="%2"/>
+  <alias path="/hulkStore_web/src/main/webapp/NewUsuario.xhtml" value="%10"/>
+  <alias path="dtAddRowView.onRowEdit" value="%9"/>
+  <alias path="usuario.apellido" value="%11"/>
+  <alias path="usuarioBacking" value="%6"/>
   <alias
    path="/hulkStore_ejb/src/main/java/co/com/java/service/UsuarioService.java" value="%5"/>
+  <alias path="usuario.fechaRegsitro" value="%13"/>
+  <alias path="dtAddRowView" value="%14"/>
+  <alias path="usuario.nombre" value="%15"/>
+  <alias path="/hulkStore_web/src/main/webapp/inicio.xhtml" value="%12"/>
+  <alias path="/hulkStore_web/src/main/webapp/Editar.xhtml" value="%8"/>
+  <alias path="/hulkStore_api/src/main/java/co/com/model/Usuario.java" value="%16"/>
+  <alias path="product.price" value="%17"/>
+  <alias path="dtAddRowView.onRowCancel" value="%18"/>
+  <alias path="product" value="%19"/>
   <alias
    path="/hulkStore_web/src/main/java/co/com/java/beans/UsuarioBean.java" value="%0"/>
   <alias path="usuarioServiceImpl" value="%3"/>
-  <alias path="usuarioBean" value="%1"/>
-  <alias
-   path="/hulkStore_ejb/src/main/java/co/com/java/service/impl/UsuarioServiceImpl.java" value="%2"/>
+  <alias path="product.inventoryStatus" value="%20"/>
+  <alias path="product.name" value="%21"/>
+  <alias path="clienteBean" value="%22"/>
   <alias
    path="/hulkStore_web/src/main/java/co/com/java/backings/UsuarioBacking.java" value="%4"/>
-  <alias path="usuarioBacking" value="%6"/>
+  <alias path="cliente" value="%23"/>
+  <alias path="product.code" value="%24"/>
+  <alias path="cliente.id" value="%25"/>
+  <alias path="usuarioBean" value="%1"/>
+  <alias path="dtEditView.inventoryStatusList" value="%26"/>
+  <alias path="dtEditView" value="%27"/>
+  <alias path="dtAddRowView.products1" value="%28"/>
+  <alias path="usuario" value="%29"/>
+  <alias path="status" value="%30"/>
  </aliases>
  <includes/>
  <uris>

@@ -26,7 +26,6 @@ import co.com.util.StoreException;
 @Named
 @ApplicationScoped
 public class UsuarioServiceImpl implements UsuarioService {
-	
 
 	@EJB
 	UsuarioDAO usuarioDao;
@@ -37,8 +36,28 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public List<Usuario> consultarUsuario() throws StoreException {
+	public List<Usuario> consultarUsuarios() throws StoreException {
 		return usuarioDao.findAll();
+	}
+
+	@Override
+	public Usuario buscarUsuario(Integer id) throws StoreException {
+		return usuarioDao.findById(id);
+	}
+
+	@Override
+	public void actualizarUsuario(Usuario usuario) throws StoreException {
+		usuarioDao.update(usuario);
+	}
+
+	@Override
+	public void borrarUsuario(Usuario usuario) throws StoreException {
+		usuarioDao.delete(usuario);
+	}
+
+	@Override
+	public void borrarUsuarioById(Integer id) throws StoreException {
+		usuarioDao.delete(id);		
 	}
 
 }
