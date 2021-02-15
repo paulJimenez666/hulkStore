@@ -1,0 +1,19 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.dao.impl;
+
+import co.com.dao.MovimientoDAO;
+import co.com.model.Movimiento;
+
+/**
+ * <b> Permite implementar los metodos para la tabla movimiento. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,14/02/2021
+ * @since JDK 1.8
+ */
+public class MovimientoDAOImpl extends GenericDAOImpl<Movimiento, Integer> implements MovimientoDAO {
+
+}

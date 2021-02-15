@@ -1,0 +1,36 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.java.service;
+
+import java.util.List;
+
+import javax.ejb.Local;
+
+import co.com.model.Producto;
+import co.com.util.StoreException;
+
+/**
+ * <b> Permite declarar los metodos de la tabla producto. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,14/02/2021
+ * @since JDK 1.8
+ */
+@Local
+public interface ProductoService {
+
+	/**
+	 * 
+	 * <b> Permite retornar todos los productos registrados en la base de datos </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @return
+	 * @throws StoreException
+	 */
+	public List<Producto> consultarProductos() throws StoreException;
+
+}

@@ -11,16 +11,14 @@ import co.com.dao.ProductoDAO;
 import co.com.model.Producto;
 
 /**
- * <b>
- * Incluir aqui la descripcion de la clase.
- * </b>
+ * <b> Implementación de metodos para el CRUD de la tabla Producto. </b>
  * 
  * @author Paul Jimenez
  * @version 1.0,14/02/2021
  * @since JDK 1.8
-*/
+ */
 @Stateless
 @LocalBean
-public class ProductoDAOImpl extends GenericDAOImpl<Producto, Integer> implements ProductoDAO{
+public class ProductoDAOImpl extends GenericDAOImpl<Producto, Integer> implements ProductoDAO {
 
 }

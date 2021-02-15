@@ -1,0 +1,92 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.java.beans;
+
+import java.io.Serializable;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+import javax.persistence.Column;
+
+/**
+ * <b> Incluir aqui la descripcion de la clase. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,14/02/2021
+ * @since JDK 1.8
+ */
+@Named("movimientoBean")
+@RequestScoped
+public class MovimientoBean implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer idMovimiento;
+
+	private String descripcion;
+
+	private Integer producto;
+
+	private Integer tipoMovimiento;
+
+	/**
+	 * @return the idMovimiento
+	 */
+	public Integer getIdMovimiento() {
+		return idMovimiento;
+	}
+
+	/**
+	 * @param idMovimiento the idMovimiento to set
+	 */
+	public void setIdMovimiento(Integer idMovimiento) {
+		this.idMovimiento = idMovimiento;
+	}
+
+	/**
+	 * @return the descripcion
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * @param descripcion the descripcion to set
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	/**
+	 * @return the producto
+	 */
+	public Integer getProducto() {
+		return producto;
+	}
+
+	/**
+	 * @param producto the producto to set
+	 */
+	public void setProducto(Integer producto) {
+		this.producto = producto;
+	}
+
+	/**
+	 * @return the tipoMovimiento
+	 */
+	public Integer getTipoMovimiento() {
+		return tipoMovimiento;
+	}
+
+	/**
+	 * @param tipoMovimiento the tipoMovimiento to set
+	 */
+	public void setTipoMovimiento(Integer tipoMovimiento) {
+		this.tipoMovimiento = tipoMovimiento;
+	}
+
+}

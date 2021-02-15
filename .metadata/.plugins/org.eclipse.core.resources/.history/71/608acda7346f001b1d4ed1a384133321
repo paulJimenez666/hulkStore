@@ -1,0 +1,27 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.java.backings;
+
+import java.io.Serializable;
+
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
+
+/**
+ * <b>
+ * Incluir aqui la descripcion de la clase.
+ * </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,14/02/2021
+ * @since JDK 1.8
+*/
+@Named("movimientoBacking")
+@ViewScoped
+public class MovimientoBacking implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+}

@@ -14,21 +14,15 @@ public class Carrito implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_carrito")
 	private Integer idCarrito;
 
 	private String descripcion;
 
-	//bi-directional many-to-one association to Producto
-	@ManyToOne
-	@JoinColumn(name="id_carrito")
-	private Producto producto1;
-
-	//bi-directional many-to-one association to Producto
-	@ManyToOne
+	//uni-directional many-to-one association to Producto
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_producto")
-	private Producto producto2;
+	private Producto producto;
 
 	public Carrito() {
 	}
@@ -49,20 +43,12 @@ public class Carrito implements Serializable {
 		this.descripcion = descripcion;
 	}
 
-	public Producto getProducto1() {
-		return this.producto1;
+	public Producto getProducto() {
+		return this.producto;
 	}
 
-	public void setProducto1(Producto producto1) {
-		this.producto1 = producto1;
-	}
-
-	public Producto getProducto2() {
-		return this.producto2;
-	}
-
-	public void setProducto2(Producto producto2) {
-		this.producto2 = producto2;
+	public void setProducto(Producto producto) {
+		this.producto = producto;
 	}
 
 }

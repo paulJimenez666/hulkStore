@@ -50,7 +50,7 @@ public class UsuarioBacking implements Serializable {
 
 	@PostConstruct
 	public void init() throws StoreException {
-		// consultarUsuarios();
+		consultarUsuarios();
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class UsuarioBacking implements Serializable {
 		} catch (StoreException e) {
 			e.printStackTrace();
 		}
-		return "/faces/Editar.xhtml";
+		return "/faces/EditarUsuario.xhtml";
 	}
 
 	/**
@@ -165,7 +165,7 @@ public class UsuarioBacking implements Serializable {
 		try {
 			usuarioService.borrarUsuarioById(id);
 		} catch (StoreException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return "/faces/index.xhtml";
 	}

@@ -1,0 +1,23 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.java.beans;
+
+import java.io.Serializable;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+
+/**
+ * <b> Incluir aqui la descripcion de la clase. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,14/02/2021
+ * @since JDK 1.8
+ */
+@Named("usuarioBean")
+@RequestScoped
+public class CarritoBean implements Serializable {
+
+}

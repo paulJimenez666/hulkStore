@@ -1,0 +1,58 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.java.beans;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+
+import co.com.model.Producto;
+
+/**
+ * <b> Incluir aqui la descripcion de la clase. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,14/02/2021
+ * @since JDK 1.8
+ */
+@Named("carritoBean")
+@RequestScoped
+public class CarritoBean implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	private Integer idCarrito;
+	private String descripcion;
+	
+	private List<Producto> productos;
+	/**
+	 * @return the idCarrito
+	 */
+	public Integer getIdCarrito() {
+		return idCarrito;
+	}
+	/**
+	 * @param idCarrito the idCarrito to set
+	 */
+	public void setIdCarrito(Integer idCarrito) {
+		this.idCarrito = idCarrito;
+	}
+	/**
+	 * @return the descripcion
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+	/**
+	 * @param descripcion the descripcion to set
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	
+	
+}

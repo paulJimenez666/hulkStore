@@ -4,6 +4,8 @@
  */
 package co.com.dao;
 
+import javax.ejb.Local;
+
 import co.com.model.Carrito;
 
 /**
@@ -15,6 +17,7 @@ import co.com.model.Carrito;
  * @version 1.0,14/02/2021
  * @since JDK 1.8
 */
+@Local
 public interface CarritoDAO extends GenericDAO<Carrito, Integer> {
 
 }

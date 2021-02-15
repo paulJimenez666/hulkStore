@@ -7,7 +7,7 @@
    <Memento collapsed="false" type="Advanced"/>
   </Memento>
   <Memento type="">
-   <Memento type="Properties Editor"/>
+   <Memento collapsed="false" type="Properties Editor"/>
   </Memento>
  </TreeFormPage>
 </Layout>

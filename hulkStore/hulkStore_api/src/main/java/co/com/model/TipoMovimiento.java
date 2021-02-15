@@ -1,0 +1,52 @@
+package co.com.model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the "tipoMovimiento" database table.
+ * 
+ */
+@Entity
+@Table(name="\"tipoMovimiento\"")
+@NamedQuery(name="TipoMovimiento.findAll", query="SELECT t FROM TipoMovimiento t")
+public class TipoMovimiento implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="\"id_Movimiento\"")
+	private Integer id_Movimiento;
+
+	private Integer codigo;
+
+	private String tipo;
+
+	public TipoMovimiento() {
+	}
+
+	public Integer getId_Movimiento() {
+		return this.id_Movimiento;
+	}
+
+	public void setId_Movimiento(Integer id_Movimiento) {
+		this.id_Movimiento = id_Movimiento;
+	}
+
+	public Integer getCodigo() {
+		return this.codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getTipo() {
+		return this.tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+}

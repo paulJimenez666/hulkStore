@@ -28,7 +28,7 @@ import co.com.util.StoreException;
 public class UsuarioServiceImpl implements UsuarioService {
 
 	@EJB
-	UsuarioDAO usuarioDao;
+	private UsuarioDAO usuarioDao;
 
 	@Override
 	public void guardarUsuario(Usuario usuario) throws StoreException {

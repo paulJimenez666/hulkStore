@@ -4,7 +4,6 @@
  */
 package co.com.dao.impl;
 
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 import co.com.dao.UsuarioDAO;
