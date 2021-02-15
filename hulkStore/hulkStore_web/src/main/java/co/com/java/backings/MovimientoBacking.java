@@ -5,42 +5,171 @@
 package co.com.java.backings;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 import javax.faces.annotation.ManagedProperty;
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 import co.com.java.beans.CarritoBean;
+import co.com.java.service.MovimientoService;
+import co.com.java.service.ProductoService;
+import co.com.java.service.StockService;
 import co.com.model.Movimiento;
 import co.com.model.Producto;
+import co.com.model.Stock;
+import co.com.util.StoreException;
 
 /**
- * <b>
- * Incluir aqui la descripcion de la clase.
- * </b>
+ * <b> Incluir aqui la descripcion de la clase. </b>
  * 
  * @author Paul Jimenez
  * @version 1.0,14/02/2021
  * @since JDK 1.8
-*/
+ */
 @Named("movimientoBacking")
 @ViewScoped
 public class MovimientoBacking implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@ManagedProperty(value = "#{carritoBean}")
 	private CarritoBean carritoBean;
-	
-	
-		
-	public void registrarVenda() {
-		for (Producto producto : carritoBean.getProductos()) {
-			Movimiento movimiento = new Movimiento();
-			movimiento.setDescripcion("VENTA");
-			movimiento.setProducto(producto.getIdProducto());
+
+	@Inject
+	private StockService stockService;
+
+	@Inject
+	private ProductoService productoService;
+
+	@Inject
+	private MovimientoService movimientoService;
+
+	/**
+	 * 
+	 * <b> Permite realizar un registro en la tabla movimiento y actualizar el stock . </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 */
+	public void registrarVenta() {
+		try {
+			for (Producto producto : carritoBean.getProductos()) {
+
+				if (buscarProductoInStock(producto.getIdProducto())) {
+					Stock stockRegistrado = buscarStockByProducto(producto.getIdProducto());
+					stockRegistrado.setCantidad(stockRegistrado.getCantidad() - 1);
+
+					stockService.actualizarStock(stockRegistrado);
+
+				} else {
+					Stock stock = new Stock();
+					stock.setDescripcion(producto.getDescripcion());
+					stock.setCantidad(1);
+					stockService.guardarStock(stock);
+				}
+				Movimiento movimiento = new Movimiento();
+				movimiento.setDescripcion("VENTA");
+				movimiento.setProducto(producto);
+				movimiento.setTipoMovimiento(2);
+				movimiento.setFechaRegistro(new Date());
+				movimientoService.guardarMovimiento(movimiento);
+			}
+		} catch (StoreException e) {
+			e.printStackTrace();
 		}
-		
+
+	}
+
+	/**
+	 * 
+	 * <b> Permite registar la compra de un producto y actualizar el stock. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param producto
+	 */
+	public void registrarCompra(Producto producto) {
+		try {
+			Movimiento movimiento = new Movimiento();
+			movimiento.setDescripcion("COMPRA");
+			movimiento.setProducto(producto);
+			movimiento.setTipoMovimiento(1);
+			movimiento.setFechaRegistro(new Date());
+
+			movimientoService.guardarMovimiento(movimiento);
+
+			if (buscarProductoInStock(producto.getIdProducto())) {
+				Stock stockRegistrado = buscarStockByProducto(producto.getIdProducto());
+				stockRegistrado.setCantidad(stockRegistrado.getCantidad() + 1);
+
+				stockService.actualizarStock(stockRegistrado);
+
+			} else {
+				Stock stock = new Stock();
+				stock.setDescripcion(producto.getDescripcion());
+				stock.setCantidad(1);
+				stockService.guardarStock(stock);
+			}
+		} catch (StoreException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * <b> Retorna afirmativo si encuentra el producto en el stock. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param idProducto
+	 * @return
+	 */
+	private boolean buscarProductoInStock(Integer idProducto) {
+		List<Stock> listaStock;
+		boolean respuesta = false;
+		try {
+			listaStock = stockService.consultarStock();
+
+			for (Stock stock : listaStock) {
+				if (stock.getProducto().getIdProducto() == idProducto) {
+					return true;
+				}
+			}
+		} catch (StoreException e) {
+			e.printStackTrace();
+		}
+		return respuesta;
+	}
+
+	/**
+	 * 
+	 * <b> Permite encontrar un registro en la tabla stock por medio del codigo de producto </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param idProducto
+	 * @return
+	 */
+	private Stock buscarStockByProducto(Integer idProducto) {
+		try {
+			List<Stock> listaStock = stockService.consultarStock();
+
+			for (Stock stock : listaStock) {
+				if (stock.getProducto().getIdProducto() == idProducto) {
+					return stock;
+				}
+			}
+		} catch (StoreException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

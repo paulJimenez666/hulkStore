@@ -1,0 +1,54 @@
+package co.com.model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the carrito database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Carrito.findAll", query="SELECT c FROM Carrito c")
+public class Carrito implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="id_carrito")
+	private Integer idCarrito;
+
+	private String descripcion;
+
+	//uni-directional many-to-one association to Producto
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_producto")
+	private Producto producto;
+
+	public Carrito() {
+	}
+
+	public Integer getIdCarrito() {
+		return this.idCarrito;
+	}
+
+	public void setIdCarrito(Integer idCarrito) {
+		this.idCarrito = idCarrito;
+	}
+
+	public String getDescripcion() {
+		return this.descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Producto getProducto() {
+		return this.producto;
+	}
+
+	public void setProducto(Producto producto) {
+		this.producto = producto;
+	}
+
+}

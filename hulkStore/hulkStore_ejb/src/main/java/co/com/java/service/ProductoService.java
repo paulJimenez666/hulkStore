@@ -45,4 +45,17 @@ public interface ProductoService {
 	 */
 	public void registrarProducto(Producto producto) throws StoreException;
 
+	/**
+	 * 
+	 * <b> Permite consultar el producto por id </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param idProducto
+	 * @return
+	 * @throws StoreException
+	 */
+	public Producto consultarProductoByIP(Integer idProducto) throws StoreException;
+
 }

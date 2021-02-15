@@ -39,4 +39,9 @@ public class ProductoServiceImpl implements ProductoService {
 		productoDao.persist(producto);
 	}
 
+	@Override
+	public Producto consultarProductoByIP(Integer idProducto) throws StoreException {
+		return productoDao.findById(idProducto);
+	}
+
 }

@@ -14,14 +14,17 @@ public class Stock implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_stock")
 	private Integer idStock;
 
+	private Integer cantidad;
+
 	private String descripcion;
 
-	@Column(name="id_producto")
-	private Integer idProducto;
+	//uni-directional many-to-one association to Producto
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_producto")
+	private Producto producto;
 
 	public Stock() {
 	}
@@ -34,6 +37,14 @@ public class Stock implements Serializable {
 		this.idStock = idStock;
 	}
 
+	public Integer getCantidad() {
+		return this.cantidad;
+	}
+
+	public void setCantidad(Integer cantidad) {
+		this.cantidad = cantidad;
+	}
+
 	public String getDescripcion() {
 		return this.descripcion;
 	}
@@ -42,12 +53,12 @@ public class Stock implements Serializable {
 		this.descripcion = descripcion;
 	}
 
-	public Integer getIdProducto() {
-		return this.idProducto;
+	public Producto getProducto() {
+		return this.producto;
 	}
 
-	public void setIdProducto(Integer idProducto) {
-		this.idProducto = idProducto;
+	public void setProducto(Producto producto) {
+		this.producto = producto;
 	}
 
 }

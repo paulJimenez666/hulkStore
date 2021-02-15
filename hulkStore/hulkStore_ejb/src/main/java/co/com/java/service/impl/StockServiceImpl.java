@@ -4,6 +4,8 @@
  */
 package co.com.java.service.impl;
 
+import java.util.List;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 
@@ -28,6 +30,21 @@ public class StockServiceImpl implements StockService {
 	@Override
 	public void actualizarStock(Stock stock) throws StoreException {
 		stockDao.update(stock);
+	}
+
+	@Override
+	public void guardarStock(Stock stock) throws StoreException {
+		stockDao.persist(stock);
+	}
+
+	@Override
+	public Stock buscarStockById(Integer idStock) throws StoreException {
+		return stockDao.findById(idStock);
+	}
+
+	@Override
+	public List<Stock> consultarStock() throws StoreException {
+		return stockDao.findAll();
 	}
 
 }

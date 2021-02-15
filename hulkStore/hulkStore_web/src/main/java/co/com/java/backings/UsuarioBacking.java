@@ -95,7 +95,7 @@ public class UsuarioBacking implements Serializable {
 	 */
 	public String guardar(Usuario usuario) {
 		// guarda la fecha de registro
-		usuario.setFechaRegistro(new Date());
+		usuario.setFecharegistro(new Date());
 
 		try {
 			usuarioService.guardarUsuario(usuario);
@@ -141,7 +141,7 @@ public class UsuarioBacking implements Serializable {
 	public String actualizar(Usuario usuario) {
 		// guarda la fecha de actualizacion
 		Date fechaActual = new Date();
-		usuario.setFechaRegistro(fechaActual);
+		usuario.setFecharegistro(fechaActual);
 
 		try {
 			usuarioService.actualizarUsuario(usuario);

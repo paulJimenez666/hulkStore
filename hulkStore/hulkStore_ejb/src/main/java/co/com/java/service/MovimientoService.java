@@ -28,8 +28,7 @@ public interface MovimientoService {
 	 * </p>
 	 *
 	 * @param movimiento
-	 * @param tipoMovimiento
 	 * @throws StoreException
 	 */
-	public void guardarMovimiento(Movimiento movimiento, TipoMovimiento tipoMovimiento) throws StoreException;
+	public void guardarMovimiento(Movimiento movimiento) throws StoreException;
 }

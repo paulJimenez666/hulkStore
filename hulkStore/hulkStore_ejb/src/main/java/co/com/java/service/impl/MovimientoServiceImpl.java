@@ -11,7 +11,6 @@ import javax.inject.Named;
 import co.com.dao.MovimientoDAO;
 import co.com.java.service.MovimientoService;
 import co.com.model.Movimiento;
-import co.com.model.TipoMovimiento;
 import co.com.util.StoreException;
 
 /**
@@ -29,7 +28,7 @@ public class MovimientoServiceImpl implements MovimientoService {
 	private MovimientoDAO movimientoDao;
 
 	@Override
-	public void guardarMovimiento(Movimiento movimiento, TipoMovimiento tipoMovimiento) throws StoreException {
+	public void guardarMovimiento(Movimiento movimiento) throws StoreException {
 		
 		movimientoDao.persist(movimiento);
 	}

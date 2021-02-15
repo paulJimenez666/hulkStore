@@ -1,0 +1,96 @@
+/*
+ * Copyright 2021 Paul Jimenez
+ * Todos los derechos reservados (+57)3117976833
+ */
+package co.com.java.backings;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.faces.annotation.ManagedProperty;
+import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import co.com.java.beans.CarritoBean;
+import co.com.java.service.MovimientoService;
+import co.com.java.service.ProductoService;
+import co.com.java.service.StockService;
+import co.com.model.Movimiento;
+import co.com.model.Producto;
+import co.com.model.Stock;
+import co.com.util.StoreException;
+
+/**
+ * <b> Incluir aqui la descripcion de la clase. </b>
+ * 
+ * @author Paul Jimenez
+ * @version 1.0,14/02/2021
+ * @since JDK 1.8
+ */
+@Named("movimientoBacking")
+@ViewScoped
+public class MovimientoBacking implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@ManagedProperty(value = "#{carritoBean}")
+	private CarritoBean carritoBean;
+
+	@Inject
+	private StockService stockService;
+
+	@Inject
+	private ProductoService productoService;
+	
+	@Inject
+	private MovimientoService movimientoService;
+
+	public void registrarVenda() {
+		for (Producto producto : carritoBean.getProductos()) {
+			Stock stock = new Stock();
+			if (buscarProductoInStock(producto.getIdProducto())) {
+				stock.setCantidad(stock.getCantidad() - 1);
+				
+				Movimiento movimiento = new Movimiento();
+				movimiento.setDescripcion("VENTA");
+				movimiento.setProducto(producto);
+				movimiento.setTipoMovimiento(1);
+				movimientoService.guardarMovimiento(movimiento);
+			} else {
+				stock.setDescripcion(producto.getDescripcion());
+				stock.setCantidad(1);
+			}
+
+		}
+
+	}
+
+	/**
+	 * 
+	 * <b> Retorna afirmativo si encuentra el producto en el stock. </b>
+	 * <p>
+	 * [Author: Paul Jimenez, Date: 14/02/2021]
+	 * </p>
+	 *
+	 * @param idProducto
+	 * @return
+	 */
+	private boolean buscarProductoInStock(Integer idProducto) {
+		List<Stock> listaStock;
+		boolean respuesta = false;
+		try {
+			listaStock = stockService.consultarStock();
+
+			for (Stock stock : listaStock) {
+				if (stock.getProducto().getIdProducto() == idProducto) {
+					return true;
+				}
+			}
+		} catch (StoreException e) {
+			e.printStackTrace();
+		}
+		return respuesta;
+	}
+
+}
